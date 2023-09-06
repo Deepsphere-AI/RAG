@@ -7,3 +7,4 @@ PyMuPDF==1.22.5
 PyPDF2==3.0.1
 streamlit==1.22.0
 vertexai==0.0.1
+tiktoken
