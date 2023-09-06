@@ -1,15 +1,10 @@
-audio_recorder_streamlit==0.0.8
 google_cloud_aiplatform==1.25.0
+langchain==0.0.281
 newspaper3k==0.2.8
 openai==0.27.8
-pandas==2.0.1
 Pillow==9.5.0
+Pillow==10.0.0
 PyMuPDF==1.22.5
 PyPDF2==3.0.1
-python_docx==0.8.11
-Requests==2.31.0
 streamlit==1.22.0
 vertexai==0.0.1
-google-cloud-texttospeech==2.14.1
-google-cloud-speech==2.20.0
-altair==4.0
