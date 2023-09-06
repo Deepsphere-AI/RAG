@@ -1,50 +1,68 @@
 import streamlit as st
-import PyPDF2
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.vectorstores import FAISS
 import os
-from langchain.chains.question_answering import load_qa_chain
-from langchain.llms import OpenAI
+import sys
+from src.exception import CustomException
+#os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "C:/Projects/Generative_AI/Vertex_AI/personalized-learning-340207-699519426800.json"
 
-os.environ["OPENAI_API_KEY"] = os.environ["API_KEY"]
+st.set_page_config(layout="wide")
+st.markdown(
+    """
+    <style>
+    body {
+        zoom: 90%;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+from PIL import Image
+import os
+from src.Main import QuestionAnswering
 
-def extract_text_from_pdf(uploaded_file):
-    """Extract text from a PDF using the newer PdfReader."""
-    with open("temp.pdf", "wb") as out_file:
-        out_file.write(uploaded_file.getbuffer())
-    
-    with open("temp.pdf", "rb") as pdf_file:
-        reader = PyPDF2.PdfReader(pdf_file)
-        text = ""
-        for page_num in range(len(reader.pages)):
-            text += reader.pages[page_num].extract_text()
-    return text
+with open('style/final.css') as f:
+        st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html=True)
+imcol1, imcol2, imcol3 = st.columns((3,5,2))
+with imcol1:
+    st.write("")
+with imcol2:
+    st.image('image/Logo_final.png')
 
-# Download embeddings from OpenAI
-embeddings = OpenAIEmbeddings()
+with imcol3:
+    st.write("")
+st.markdown("<p style='text-align: center; color: black; font-size:23px;'><span style='font-weight: bold'></span>Working with RAG(Retrieval Augmented Generation) using Openai and Google</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: blue;margin-top: -10px ;font-size:20px;'><span style='font-weight: bold'></span>ChatGPT and Vertex AI Powered Business Application</p>", unsafe_allow_html=True)
+st.markdown("<hr style=height:2.5px;margin-top:0px;background-color:gray;>",unsafe_allow_html=True)
 
-
-
-
-st.title("PDF Question Answering using OpenAI")
-
-uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
-if uploaded_file is not None:
-    raw_text = extract_text_from_pdf(uploaded_file)
-    # We need to split the text using Character Text Split such that it sshould not increse token size
-    text_splitter = CharacterTextSplitter(
-        separator = "\n",
-        chunk_size = 800,
-        chunk_overlap  = 200,
-        length_function = len,
-    )
-    texts = text_splitter.split_text(raw_text)
-    question = st.text_input("Ask a question about the uploaded document:")
-
-    if question:
-        document_search = FAISS.from_texts(texts, embeddings)
-        chain = load_qa_chain(OpenAI(), chain_type="stuff")
-        docs = document_search.similarity_search(question)
-        answer = chain.run(input_documents=docs, question=question)
-        st.write("Answer:", answer)
+#---------Side bar-------#
+with st.sidebar:
+    selected = st.selectbox("",['RAG(Retrieval Augmented Generation)'],key='text')
+    Library = st.selectbox("",
+                     ["Library Used","Streamlit","Image","Pandas","Requests"],key='text1')
+    Gcp_cloud = st.selectbox("",
+                     ["GCP Services Used","VM Instance","Computer Engine","Cloud Storage"],key='text2')
+    st.markdown("## ")
+    href = """<form action="#">
+            <input type="submit" value="Clear/Reset" />
+            </form>"""
+    st.sidebar.markdown(href, unsafe_allow_html=True)
+    st.markdown("# ")
+    st.markdown("# ")
+    st.markdown("# ")
+    st.markdown("# ")
+    st.markdown("# ")
+    st.markdown("<p style='text-align: center; color: White; font-size:20px;'>Build & Deployed on<span style='font-weight: bold'></span></p>", unsafe_allow_html=True)
+    s1,s2=st.columns((2,2))
+    with s1:
+        st.markdown("### ")
+        st.image('image/002.png')
+    with s2:    
+        st.markdown("### ")
+        st.image("image/oie_png.png")
+#--------------function calling-----------#
+if __name__ == "__main__":
+    # try:
+        
+        if selected == 'RAG(Retrieval Augmented Generation)':
+            QuestionAnswering()
+    # except Exception as e:
+    #     raise CustomException(e,sys)
