@@ -18,8 +18,9 @@ def GCP_Embedding(input_text,query):
         verbose=True,)
 
     embeddings = VertexAIEmbeddings()
-    print("--indexing---")
-    loader = TextLoader(input_text, encoding='utf-8')
+    with open("Result\\temp.txt", "w", encoding='utf-8') as file:
+        file.write(input_text)
+    loader = TextLoader("Result\\temp.txt", encoding='utf-8')
 
     index = VectorstoreIndexCreator(vectorstore_cls=DocArrayInMemorySearch,
               embedding=embeddings).from_loaders([loader])

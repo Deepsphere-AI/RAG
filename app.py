@@ -2,7 +2,7 @@ import streamlit as st
 import os
 import sys
 from src.exception import CustomException
-#os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "C:/Projects/Generative_AI/Vertex_AI/personalized-learning-340207-699519426800.json"
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = "C:/Projects/Generative_AI/Vertex_AI/personalized-learning-340207-699519426800.json"
 
 st.set_page_config(layout="wide")
 st.markdown(

@@ -1,0 +1,14 @@
+{
+  "type": "service_account",
+  "project_id": "personalized-learning-340207",
+  "private_key_id": "6995194268000cd475498d4d734d90710c934914",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCxARRA+1GrkRf/\nJfa1GwUHhlkd2mqfSAMX6+8sfM6PKCwTnY4iPaBTk29jKR2buR6qA8lsPIDM92s/\nM3Mes5MEIsH0gH+gptjnwTvFBcFhdOXTf+cuj674bJY3cL0h1Y3fd0XHsG+on+dj\n3m4CW0gw/JQm+TRIyHSjt9Pc3LFJmQmp+xcDZLtKBhB65jt4YqpwEYs+NFDroiZx\n+nzc1moqVL+4rPA69TmBMUPscAgq/IlQ3SdPhJFQBgXTQ8TtxSTQMMZlxpiBFOqa\n+7ku2bKBXMvZPkjeOSVvGXRQAYL11FEYDXZJBnUkWc7d0skdkJt3tZv8eZstZmeT\ntVKyg7K3AgMBAAECggEAFwPeZ9Kl3GqZ1a3Qhdz1CvTvmn+fdIWPDWm6qCy0SQ3+\nqTBH3nDn62YUyi568JgiAhZK9v1o+/3B3q5obhoIaDXCxXF95tw7AOtxw50Ld4oV\nJiqP21CIfjnUUHIizYbwkxl1o9Dvu9vK4QP3huvql6AH/YdSwpH6BJ2u+R1jGgAK\nHKE1reSUJkasDoObQDFqnOP6fSDlH5TxyAF14iD01e9K6Nq3bJe/ST5vKOd3UHre\nvM4FqSGZKRH+F2VwOaePtCJleJIYStHgtilx4XwIdyPuWeu0zxCRtxxHsNJKqZbu\nauoh0sfaMAwr9c/7rouSMiCAjGusgfL/dN0FDOucSQKBgQDodT9aWnTg5ITst4SH\nVLcL/XzqLwJFCgDsaFpat69YTK95j6qp77zyhNmWtgqnZnSqgyna7teuHKyKTFTd\nT3THR09QT+b6OpxJYjOW/ZYIBQeRaEmeCWA2OEuzMnjspMKmPALGp/0KXFVtKoY2\nQwEbTiuiIq0Smb79nDrXfsYqnwKBgQDC7iAztkCtzdRYWHVffOtMTfEpPCgFG5Am\n8pdhK3swADg+Fu9euTJ7nnSnmXwRYl00Yw9JdYBfPM7djm1/JVACVlzW1emvs7Zs\nrYECNxhRPeEh7oNbuT4mwXYNv6OMz+MWbab0oyoad8uK5yrxMuAcNSyWEdmakWpq\nzAn2etgY6QKBgCdnQH7rWGaKtfF+Riu+c2zH4jW8FDFpubBZG//GpSVdkl0TukUm\nCyw80rlWUEYB+wKwSxb+Z3bvC1xCBhyhjFT/RHWDpc6Cwt05lS8h+x2O5LKEL/5m\n7nUiY8qTYqYSY6BUCdBsx1rLPfvMOoXWI8jiHklUgWvmvdY1dk/zAFpXAoGALDCh\nejeh2ATmU5TSHvCJwwWUWz248Nd7yWiLasrZpVsXZPP8FeQ0DpQwa+I+nw5GhN7E\nE2ogzPZTCyUDq6RAzBbZ+xYJYPyDqYV3zpHA4IH/rJqOitemwFBxO9Kq9/wUxfvb\nsm/e1ps7uGSJdp6K8boYPnkTdJfsoQNaatcUcCkCgYBq1MnH/gKbu0Bof9clVa0m\nqQHiEYrK2dztLmRKVVx4BwGugQycM6FktxO/Grf4LGIwPE81AgnU0zPqil9U+V28\niEU6iMCttrM3qua0YpxHrpzzUHL1oSBdoG41IWq92Zx3U9SkoGYqLQpwYzslFUSx\nY4V8cTSQ+UnOKTmY3paQqw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "google-palm-sa@personalized-learning-340207.iam.gserviceaccount.com",
+  "client_id": "105246318200431233537",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/google-palm-sa%40personalized-learning-340207.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com",
+  "location" :"us-central1"
+}

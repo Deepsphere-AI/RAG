@@ -13,7 +13,7 @@ def file_process(vAR_input_vendor):
     with col2:
         vAR_input_type = ['Passage','File Upload','Web URL']
         vAR_user_input_type = st.radio(' ',vAR_input_type,horizontal=True)
-    
+    # Passage
     if vAR_user_input_type == "Passage":
         with col1:
             st.write("## ")

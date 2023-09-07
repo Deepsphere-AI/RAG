@@ -1,0 +1,372 @@
+What is AI?
+AI is the theory and development of computer system able to perform task normally requiring
+human intelligence
+What is ML?
+Machine learning gives computers the ability to learn without explicit programming
+●
+Supervised learning - Labelled data
+●
+Unsupervised learning - Unlabelled data
+Deep learning
+DL user Artificial neural network more complex patterns than traditional machine
+learning.
+●
+DL model Type
+○
+Discriminative
+○
+Generative
+Discriminative
+●
+Used Classify or Predict
+●
+Typically trained on a dataset of labelled data
+●
+Learns the relationship between the feature of the data points and the labels
+Generative
+●
+Generative new data that is similar to data it was trained on
+●
+Understanding distribution of data and how likely a given examples is
+●
+Predict next word in a sequence of words
+What is Generative AI ?
+Generative AI is a type of artificial intelligence (AI) that creates original content, such as
+text, images, or even music. Generative AI models are trained on large datasets of existing
+content. Using the information or underlying structure of the data, they are able to produce
+original content in a similar manner to what they were trained on.
+The process of learning from existing content is called training and results in the creation of a
+statistical model. When given a prompt, GenAl uses this statistical model to predict what an
+expected response might be-and this generates new content.
+Generative Models
+Generative language models - generative language models learn about patterns in
+language though training data then given some text, they predict what comes next
+Generative images needs - generative images models produce new images using
+technique like diffusion, they give prompt or related imagery, they transform random noise
+into images or generate images from prompts
+Model types
+Text-to-text → text - to - text model take a NLP input and produce text output, these
+models are trained to learn the mapping between a pair of text
+Text - to - image → text to images models are relatively new and are trained on a
+large set of images each captioned with a short text description diffusion is one method used
+to achieve this
+Text - to - video → text - to - video model aims to generate a video representation
+from text input. The text input can be anything from a single sentence to a full script, and the
+output is a video that corresponds to the input text
+Text - to - D → text - to - D models generate three dimensional object that
+correspond to a user’s text description(for use in games or other D world)
+Text - to - task → text - to - task models are trained to perform a specific task or
+action based on text input, this task can be a wide range of actions such as answering a
+question performing a search making a prediction or taking sore sort on action
+Model Garden Vertex AI foundation model:
+Language -
+PaLM API for Chat
+PaLM API for Text
+BERT
+Visions-
+Embeddings extractor
+Stable diffusion V-
+BLIP image Captioning
+BLIP VQA
+CLIP
+OWL - ViT
+ViT GPT
+What is LLM?
+LLM general-purpose language models can be pre-trained and then fine-tuned for specific
+purposes. LLM are trained to solve common language problems like:
+❖ Text classification
+❖ Question answers
+❖ Document Summarization.
+❖ Text generation
+Major feature of LLM
+. Large
+. large training dataset
+. Large number of parameter
+. General purpose.
+. commonality of human language
+. Resource Restriction.
+.
+Pre- trained and fine-tuned.
+Benefits of using LLM
+. A single model can be used for different tasks.
+. The fine - tune process requires minimal field data
+. The performance is continuously growing with more data and parameters.
+Let's take (PALM). as an Example Palm (pathways Language Model) It is a transformer model.
+short for pathway language model
+Has  billion parameter
+ billion - parameter model that achieves a state of the art performance across multiple
+language tasks.PaLM is a dense decoder only transformer model
+Leverages the new pathway system:
+It leverages the new pathways system, which has enabled Google to efficiently train a single
+model across Multiple TPG V pods. Pathway is a new architecture that will handle many
+tasks at once, learn. new tasks quickly, and reflect a better understanding of the world
+Orchestrates distributed computation for accelerator:
+Orchestrating distributed computation for accelerators in generative AI involves coordinating
+the execution of computational tasks across multiple devices or nodes to improve
+performance and scalability. This process enables the efficient utilisation of resources and
+allows for the parallelization of tasks, thereby accelerating the overall generative AI
+workflow.
+Transformer Model - we previously mentioned that PALM is a transformer model the
+transformer model consists of encoder and decoder.
+Encoder: The encoder encodes the input sequence and passes it to the decoder, which learns
+how to decode the representation for a relevant task.
+LLM Vs Traditional development:
+S.no
+LLM (API for training)
+Development of traditional machine
+learning
+
+Expertise in machine learning is not
+required
+Expertise in machine learning is required
+
+As an example, no training is provided
+As an example, training is provided
+
+Models do not need to be trained
+Training is required for models
+
+Considers prompt design
+Loss function minimization
+What are prompts and prompt engineering?
+Prompt Design: Prompts involve instructions and context passed to a language
+moder be achieve & desired task
+Prompt Engineering: Prompt engineering is the practice of developing and
+optimising prompts to efficiently use language models for a variety of applications.
+There are  Main kinds of LLM each needs prompting in a different way, the first two are
+easily confused and give vary different output
+Generic (or RAW) Language model:
+These predict the next word (technically token) based on the language in the training
+data.
+Instruction Tuned - (LM):
+Trained to predict response to the instructions given in the input.
+Dialog Tuned:
+●
+Trained have a dialog by predicting the next response
+●
+Dialog tuned models are a special case of instruction tuned where request are
+typically framed as questions for a chatbot
+●
+Dialog tuning a further specialisation of instruction tuning that expected to be
+in the context of longer back and forth conversations and typically works
+better with natural question like phrasings
+Chain a thought Reasoning
+two models are better at getting the right answer when they first output text that explains the
+reason for the answer.
+●
+The model is less likely to get the correct answer directly.
+●
+Now the output is more likely to end with the correct answer.
+●
+The model that can do everything is his practical limitation.
+●
+Task specific turning can make LLM more reliable
+Tuning
+The process of adapting a model for a new domain or set of Custom use cases by training the
+model on now data
+eg: we may collect training data and tune the LLA specifically for the legal or medical
+domain
+Fine tuning
+Bring your own datasets and retrain the model by turning every weight in the LLM
+This requires big training a Job (like really big) and hosting Your own fine-tuned model.fine
+tuning is expensive and not realistic many cases
+More efficient methods of tuning:
+Parameter-Efficient Turning model (PETM)
+Methods of turning LLM on your own Custom data without duplicating the model. the base
+model itself à not altered. Instead a small number of add-on layers are tuned, which can be
+swapped in inference time. Prompt Tuning is one of the earliest parameton Efficient tuning
+methods.
+Note!: One of the easiest parameters efficient tuning methods is prompt
+design
+What is Generative AI ?
+Generative AI is a type of artificial intelligence (AI) that creates original content, such as
+text, images, or even music. Generative AI models are trained on large datasets of existing
+content. Using the information or underlying structure of the data, they are able to produce
+original content in a similar manner to what they were trained on.
+The process of learning from existing content is called training and results in the creation of a
+statistical model. When given a prompt, GenAl uses this statistical model to predict what an
+expected response might be-and this generates new content.
+What is Generative AI studio ?
+Generative AI Studio is a Google Cloud console tool for rapidly prototyping and testing
+generative AI models. It allows you to test sample prompts, design your prompts, and
+customise foundation models to handle tasks that meet your application's needs.
+Generative AI Studio Functionality
+What does Generative AI Studio do?
+Generative AI Studio allows users to rapidly prototype and customise generative AI models
+with no code or low code, and to leverage the generative AI capabilities in their applications.
+What does Generative AI Studio currently support?
+.
+Language
+Design prompts for different tasks:
+What is a prompt?
+In the world of Generative AI, a prompt is just a fancy name for the input text that
+you feed to your model. You can feed your desired input text like questions and instructions
+to the model. The model will then provide a response based on how you structured your
+prompt, therefore, the answers you get depend on the questions you ask.
+Prompt Design
+The Process of designing the best input text to get the design's response back from the
+model.
+Types of Approaches Prompt Design
+●
+Zero-Shot Prompting - Providing a single command to the LLM without any examples
+●
+One - Shot Prompting - Providing a Single Examples of the task to the LLM.
+●
+Few - Shot Prompting - Providing a few Examples of the task to the LLM.
+Best Practices for Prompt design:
+●
+Be concise
+●
+Be specific and well-defined
+●
+Ask one task at a time
+●
+Turn generative tasks into classification tasks
+●
+Improve response quality by including examples
+Parameters:
+●
+Model Type - text-bison (latest),text-bison@,code-bison@,code-gecko@
+●
+Temperate -
+Low - Select high Possibility words use it when you expert a more
+“Predictable” answer
+High - Select low Possibility words use it when you expert a more “Creative”
+content
+●
+Top K(Numeric) - The Model returns a random word from a set of Top K possible
+words
+●
+Top P(Probability) - The Model returns a random word from a set of words with the
+sum of the likelihoods not exceeding P
+Create conversations:
+●
+Content
+○
+You need to Specify the Conversation context
+○
+Context Instructs how the model should response
+●
+Tune a Parameter
+●
+Presentar Prompt
+●
+AI Response
+●
+<View code> for API
+○
+Setup the Vertex AI SDE for Python
+○
+Use the Given code for API request a model response
+Tune and deploy a language model:
+We take a model that was pre trained on a generic dataset
+And then to make a copy of the Model
+Then using those learned weights as a starting point we re-trained the model new domain
+specific dataset
+Giant Models tuning:
+●
+High Computation
+●
+High effort
+●
+High Cost
+But there’s an Innovative approach to tuning called ‘Parameter Efficient Tuning’
+.
+Image
+Generate images:
+Vertex AI Image Generation is a feature provided by Google's Vertex AI platform that
+leverages deep learning techniques to generate images based on given text descriptions. It
+combines natural language processing (NLP) with generative models to create realistic and
+contextually relevant images.
+The process of Vertex AI Image Generation involves several steps:
+Text Input: Users provide a textual description or prompt that describes the desired image.
+This description can be as simple as a single sentence or more complex, including multiple
+sentences or even paragraphs. The text input serves as the guiding information for the image
+generation process.
+Preprocessing: The text input is preprocessed to extract relevant features and encode them in
+a suitable format for the subsequent stages. This preprocessing step typically involves
+techniques such as tokenization, word embedding, and contextual encoding to capture the
+semantic meaning and context of the text.
+Generative Model: Vertex AI utilizes advanced generative models, such as deep neural
+networks, to generate images based on the processed text input. These models are trained on
+large-scale datasets, allowing them to learn patterns, relationships, and visual concepts from a
+wide variety of images. One popular type of generative model used for image generation is
+the Generative Adversarial Network (GAN).
+Image Synthesis: The generative model takes the processed text input as input and
+synthesizes an image that corresponds to the given description. The model combines its
+learned understanding of visual features with the semantic information encoded in the text to
+generate a plausible and coherent image. The synthesis process involves mapping the latent
+space representation learned by the generative model to a visual space that represents the
+image content.
+Post-processing: Once the image is generated, post-processing techniques can be applied to
+enhance its quality or align it more closely with the user's requirements. These techniques
+may involve adjusting colors, adding filters, or performing other image manipulation
+operations to achieve the desired visual output.
+The underlying generative models used in Vertex AI Image Generation are typically trained
+on large-scale datasets that contain a diverse range of images and their corresponding textual
+descriptions. This enables the models to learn the complex mappings between the visual and
+textual domains, allowing them to generate meaningful and contextually relevant images
+based on given text inputs.
+Applications of Vertex AI Image Generation can range from creative tasks, such as
+generating artwork or concept designs, to practical use cases like assisting in content creation,
+prototyping, or generating visual assets for various industries such as advertising,
+e-commerce, and entertainment.
+It's worth noting that the specific implementation and techniques used in Vertex AI Image
+Generation may evolve over time, as research in the field of generative models advances.
+Edit images:
+.
+Speech
+Generate text from speech:
+Text-to-speech (TTS) is a very popular assistive technology used to convert text from
+speech.
+Vertex AI from google has  parameters namely Text, Voice, Speed.
+➔ Text: Enter the text that you would like to have converted to speech.
+➔ Voice: Select the desired voice for the speech. There are  voices which include
+english - female, english - male, spanish - male.
+➔ Speed: Use the slider or textbox to enter a value for the speech speed. A value of 
+represents the normal speaking rate, while a value of  represents four times the
+normal speaking rate.
+Limitations:
+. Generative AI Studio only synthesises audio with Text-to-Speech voices.
+. Requests are limited to  characters.
+Generate speech from text:
+Coming soon…
+What are the key features of Generative AI Studio Language?
+●
+Design a prompt
+●
+Create a conversation
+●
+Turn a mode
+Generative AI Studio Benefits
+Ease of Use: Generative AI Studios often provide user-friendly interfaces and tools that
+simplify the process of training and generating content. They offer pre-built models,
+templates, and workflows, making it accessible even to users without extensive AI expertise.
+Faster Iteration: Generative AI Studios enable rapid prototyping and experimentation. They
+provide a streamlined workflow, allowing users to quickly iterate and fine-tune models,
+reducing development time and effort.
+Diverse Applications: Generative AI Studios support a wide range of applications, including
+image generation, text generation, music composition, and more. They provide ready-to-use
+models and frameworks tailored to specific domains, making it easier to explore various
+creative possibilities.
+Customization Options: Studios often allow users to customise and control the generated
+outputs. They provide parameters and settings to adjust the style, complexity, or other aspects
+of the generated content, empowering users to achieve their desired results.
+Integration and Deployment: Generative AI Studios often offer integration options with
+popular programming languages and frameworks. This enables users to seamlessly integrate
+generated content into their own applications, platforms, or workflows.
+Generative AI Studio Limitation
+Lack of Control: Although customization options are available in generative AI Studios,
+achieving precise control over the generated outputs can be challenging. The models might
+produce variations that are difficult to predict or control fully, leading to potential limitations
+in meeting specific requirements or constraints.
+Ethical Concerns: Generative AI has raised ethical concerns related to the potential misuse
+of the technology, such as generating deep fakes, spreading misinformation, or infringing on
+intellectual property rights. Careful consideration and responsible use of generative AI are
+necessary to mitigate these risks.
+Limited Interpretability: Some generative AI models, such as deep neural networks, are
+complex and difficult to interpret. Understanding why a model generates specific outputs or
+identifying the causes of errors can be challenging. Interpretable models and tools for
+explainability are still active areas of research in the field of generative AI.
+Generative AI Studio Licensing and Cost
+Generative AI Use Cases
